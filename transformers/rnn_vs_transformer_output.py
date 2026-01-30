@@ -36,9 +36,17 @@ class TextDataset:
             self.sequences.append(seq_encoded)
             self.targets.append(target_encoded)
     
+    # pytorch dataset methods
     def __len__(self):
         return len(self.sequences)
     
     def __getitem__(self, idx):
         return torch.tensor(self.sequences[idx], dtype=torch.long), \
                torch.tensor(self.targets[idx], dtype=torch.long)
+
+# -------------------------- Models ---------------------------
+
+# defining a sequential model
+class TextRNN(nn.Module):
+    def __init__(self,):
+        super().__init__()
