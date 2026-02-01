@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.gridspec import GridSpec 
 import seaborn as sns
-from collections import Counter
+
 
 # set random seeds for reproducability
 torch.manual_seed(42)
@@ -323,7 +323,7 @@ if __name__ == "__main__":
     
     plt.tight_layout()
     plt.savefig('rnn_vs_transformer_comparison.png', dpi=150, bbox_inches='tight')
-    print("\n✅ Visualization saved as 'rnn_vs_transformer_comparison.png'")
+    print("\nVisualization saved as 'rnn_vs_transformer_comparison.png'")
     plt.show()
     
     # Print model statistics
