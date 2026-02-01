@@ -6,3 +6,9 @@ result = classifier(["I am really excited to learn python", "I am gonna beat the
 
 print(result)
 
+# zero-shot classification
+
+classifier2 = pipeline("zero-shot-classification")
+result2 = classifier2("This is a course about the Transformers library",
+    candidate_labels=["education", "politics", "business"],)
+print(result2)
